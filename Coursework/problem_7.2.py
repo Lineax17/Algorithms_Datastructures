@@ -11,13 +11,6 @@ start_state = [(3, 3), (0, 0)]
 def successors(X, Y):
     def sc(state):
         (cl, ml), (cr, mr) = state
-        # assert x <= X and y <= Y
-        # res = dict()
-        # res[(X, y)]: 'fill x'
-        # res[(x, Y)]: 'fill y'
-        # res[(0, y)]: 'empty x'
-        # res[(x, 0)]: 'empty y'
-        # return res
         assert mr + ml == 3 and cr + cl == 3
         return {
             # from right to left
